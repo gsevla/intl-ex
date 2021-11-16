@@ -19,12 +19,14 @@ export function AppRoot() {
       >
         <Button
           title={t("content:buttons.ptBr", "port")}
+          accessibilityLabel={t("accessibleContent:buttons.ptBr-label")}
           onPress={() => {
             i18n.changeLanguage("pt");
           }}
         />
         <Button
           title={t("content:buttons.enUs", "ing")}
+          accessibilityLabel={t("accessibleContent:buttons.enUs-label")}
           onPress={() => {
             i18n.changeLanguage("en");
           }}
@@ -53,12 +55,16 @@ export function AppRoot() {
           >
             <Button
               title={t("content:buttons.increment", "increm")}
+              accessibilityLabel={t(
+                "accessibleContent:buttons.increment-label"
+              )}
               onPress={() => {
                 setNumber((old) => old + 1);
               }}
             />
             <Button
               title={t("content:buttons.reset", "resta")}
+              accessibilityLabel={t("accessibleContent:buttons.reset-label")}
               onPress={() => {
                 setNumber(0);
               }}
