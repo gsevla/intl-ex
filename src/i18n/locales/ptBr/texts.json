@@ -1,0 +1,6 @@
+{
+    "countAmo_one": "vez",
+    "countAmo_other": "vezes",
+    "countInfo": "Você incrementou {{count}} $t(content:texts.countAmo, {\"count\": {{count}})",
+    "counterTitle": "Contador (0 a 10)"
+}

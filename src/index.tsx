@@ -21,14 +21,14 @@ export function AppRoot() {
           title={t("content:buttons.ptBr", "port")}
           accessibilityLabel={t("accessibleContent:buttons.ptBr-label")}
           onPress={() => {
-            i18n.changeLanguage("pt");
+            i18n.changeLanguage("pt_BR");
           }}
         />
         <Button
           title={t("content:buttons.enUs", "ing")}
           accessibilityLabel={t("accessibleContent:buttons.enUs-label")}
           onPress={() => {
-            i18n.changeLanguage("en");
+            i18n.changeLanguage("en-US");
           }}
         />
       </View>
@@ -41,10 +41,12 @@ export function AppRoot() {
         }}
       >
         <Text style={{ fontSize: 24 }}>
-          {t("countInfo", `Você incrementou ${number} vezes`)}
+          {t("content:texts.countInfo", `Você incrementou ${number} vezes`, {
+            count: number,
+          })}
         </Text>
         <View style={{ alignItems: "center", alignSelf: "stretch" }}>
-          <Text>{t("counterTitle", "Contador (0 a 10)")}</Text>
+          <Text>{t("content:texts.counterTitle", "Contador (0 a 10)")}</Text>
           <View style={{ height: 32 }} />
           <View
             style={{

@@ -1,11 +1,11 @@
-import i18n from "i18next";
+import i18n, { Resource } from "i18next";
 import { initReactI18next } from "react-i18next";
 import { ptBrContent, ptBrAccessibleContent } from "./locales/ptBr";
 import { enUsContent, enUsAccessibleContent } from "./locales/enUs";
 
 const languages = {
-  pt: "pt",
-  en: "en",
+  ptBr: "pt_BR",
+  enUs: "en-US",
 };
 
 const namespaces = {
@@ -13,12 +13,12 @@ const namespaces = {
   accessibleContent: "accessibleContent",
 };
 
-const resources = {
-  pt: {
+const resources: Resource = {
+  "pt_BR": {
     content: ptBrContent,
     accessibleContent: ptBrAccessibleContent,
   },
-  en: {
+  "en-US": {
     content: enUsContent,
     accessibleContent: enUsAccessibleContent,
   },
@@ -28,8 +28,8 @@ i18n.use(initReactI18next).init({
   resources,
   ns: [namespaces.content, namespaces.accessibleContent],
   defaultNS: namespaces.content,
-  lng: languages.pt,
-  fallbackLng: languages.pt,
+  lng: languages.ptBr,
+  fallbackLng: languages.ptBr,
 });
 
 export default i18n;
