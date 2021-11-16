@@ -18,13 +18,13 @@ export function AppRoot() {
         }}
       >
         <Button
-          title={t("ptBr", "port")}
+          title={t("content:buttons.ptBr", "port")}
           onPress={() => {
             i18n.changeLanguage("pt");
           }}
         />
         <Button
-          title={t("enUs", "ing")}
+          title={t("content:buttons.enUs", "ing")}
           onPress={() => {
             i18n.changeLanguage("en");
           }}
@@ -52,13 +52,13 @@ export function AppRoot() {
             }}
           >
             <Button
-              title={t("increment", "increm")}
+              title={t("content:buttons.increment", "increm")}
               onPress={() => {
                 setNumber((old) => old + 1);
               }}
             />
             <Button
-              title={t("restart", "resta")}
+              title={t("content:buttons.reset", "resta")}
               onPress={() => {
                 setNumber(0);
               }}
